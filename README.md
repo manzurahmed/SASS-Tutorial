@@ -26,7 +26,7 @@ GitHub Markdown syntax: https://help.github.com/articles/basic-writing-and-forma
 
 ভেরিয়েবল ডিক্লেয়ার করার নিয়ম:
 
-```
+```css
 $primaryColor: #f00;
 ```
 
@@ -34,7 +34,7 @@ $primaryColor: #f00;
 
 সিএসএস লেখা এই স্টেটমেন্টগুলো নেস্টিং করে খুব সহজেই লেখা সম্ভব
 
-```
+```css
 a { font-family: sans-serif; color: $primaryColor; }
 a:hover, a:focus, a:visited  { color: blue; }
 a.link-class { color: green; }
@@ -45,7 +45,7 @@ a.link-class:visited { color: black; }
 
 নেস্টিং উদাহরণ:
 
-```
+```scss
 a { font-family: sans-serif; color: $primaryColor;
    &:hover,
    &:focus,
