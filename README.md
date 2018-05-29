@@ -58,3 +58,30 @@ a { font-family: sans-serif; color: $primaryColor;
    }
 }
 ```
+
+## Video 3
+
+### Operations and Functions
+
+```css
+$container: 1170px;
+$padding: 25px;
+
+.half {
+   height: halfHeight(2, 2);
+}
+.half1 {
+   height: halfHeight(2, 3);
+}
+.half2 {
+   height: halfHeight(2, 2);
+}
+```
+
+ফাংশন ডিক্লেয়ার করতে হলে @function কিওয়ার্ড লিখে ফাংশনের নাম লিখতে হয়। ফাংশন **প্যারামিটার** গ্রহণ করে।
+
+```scss
+@function halfHeight( $first, $second ) {
+   @return $container / $first + $padding / $second;
+}
+```
