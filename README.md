@@ -85,3 +85,28 @@ $padding: 25px;
    @return $container / $first + $padding / $second;
 }
 ```
+
+## Video 4
+
+### @mixin
+
+একই সিএসএস ডিক্লারেশন একাধিক স্থানে ব্যবহৃত হলে, সেই কোডগুলোকে একটি নাম দিয়ে @mixin গ্রুপ তৈরী করে রাখা হয়। তারপর যেখানে যেখানে প্রয়োজন সেখানে সেখানে ব্যবহার করা যায়।
+
+@mixin এর সাথে function এর মত **প্যারামিটার** পাস করানো যায়। প্যারামিটারের ডিফল্ট ভ্যালু দেওয়ার জন্য ভেরিয়েবলের সাথে কোলন চিহ্ন দিয়ে ভ্যালু ফিক্স করে দিতে হবে।
+
+```css
+@mixin translateX( $val: 15px ) {
+	-webkit-transform: translateX( $val );
+	-moz-transform: translateX( $val );
+	-ms-transform: translateX( $val );
+	-o-transform: translateX( $val );
+	transform: translateX( $val );
+}
+
+.translateX {
+	@include translateX( 15px );
+}
+.myTransform {
+	@include translateX( 10px );
+}
+```
