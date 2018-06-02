@@ -176,3 +176,36 @@ $num =6;
 	$num: $num + 1;
 }
 ```
+
+## VIDEO 9
+
+### EACH LOOP
+
+```scss
+$white: #fff;
+$black: #000;
+$red: $f00;
+$primary: #ccc;
+$secondary: #333;
+
+$colors: (
+	'white': $white,
+	'black': $black,
+	'red': $red,
+	'primary': $primary,
+	'secondary': $secondary
+);
+
+@each $color, $hex in $colors
+{
+	.text-#{$color}
+	{
+		color: #hex;
+	}
+
+	.background-#{$color}
+	{
+		color: #hex;
+	}
+}
+```
